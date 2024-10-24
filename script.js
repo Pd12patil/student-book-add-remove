@@ -18,7 +18,7 @@ function getRandomEmoji() {
   return emojis[randomIndex];
 }
 
-const student = ["Pratik", "Krushna", "Siddhart", "Abhishek", "Aniket"];
+const student = ["Pratik", "Krushna", "Siddharth", "Abhishek", "Aniket"];
 
 function loadStudent() {
   const studentContainer = document.getElementById("student-container");
