@@ -50,4 +50,14 @@
     .student-card {
         min-width: auto;
     }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn {
+        margin: 10px;
+    }
 }
