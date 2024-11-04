@@ -35,15 +35,26 @@ loadStudent();
 
 function addStudent() {
   const studentInput = document.getElementById("student-name");
-  student.push(studentInput.value);
-  studentInput.value = "";
-  loadStudent();
+  const studentName = studentInput.value.trim();
+
+  if (studentName) {
+    student.push(studentName);
+    loadStudent();
+    studentInput.value = "";
+  } else {
+    alert("Please enter a valid student name.");
+  }
 }
 
 function removeStudent() {
   const studentInput = document.getElementById("student-name");
-  const studentIndex = student.indexOf(studentInput.value);
-  studentInput.value = "";
-  student.splice(studentIndex, 1);
-  loadStudent();
+  const studentName = studentInput.value.trim();
+  const index = student.indexOf(studentName);
+  if (index !== -1) {
+    student.splice(index, 1);
+    loadStudent();
+    studentInput.value = "";
+  } else {
+    alert("Student not found.");
+  }
 }
